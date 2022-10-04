@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Agents</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Her is the List Of Our Agents.</p>
+            <a href="{% url 'agents:create-agent' %}" class="flex ml-auto text-black bg-purple-300 border-0 py-2 px-6 focus:outline-none hover:bg-purple-500 rounded">Add Agent</a>
+        </div>
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Name</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Email</th>
+                        <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">Status</th>
+                        <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">Joined Date </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Agent in agents %}
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3"><a href="{% url 'agents:detail-agent' Agent.pk %}" class="text-indigo-500 hover:text-blue-500 ">{{ Agent.user.username }}</a></td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{Agent.user.email}}</td>
+                        {% if Agent.user.is_active %}
+                        <td class="border-t-2 border-gray-200 px-4 py-3 "><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                            Active
+                          </span></td>
+                        {% else %}
+                        <td class="border-t-2 border-gray-200 px-4 py-3 "><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-200 text-red-800">
+                            Deactivate
+                          </span></td>
+                        {% endif %}
+                        <td class="border-t-2 border-gray-200 px-4 py-3 w-full">{{Agent.user.date_joined}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load tailwind_filters %} {% block content %}
+
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest"> Follow Up</h2>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %} {{ form|crispy }}
+                    <div>
+                        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                      <!-- Heroicon name: solid/lock-closed -->
+                    </span>
+                    Update
+                  </button>
+                    </div>
+                </form>
+                <div class="mt-10 ">
+                    <a href="{% url 'leads:lead-delete-followup' followup.pk %} " class=" w-20 flex justify-center ml-5 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                  <!-- Heroicon name: solid/lock-closed -->
+                </span> Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

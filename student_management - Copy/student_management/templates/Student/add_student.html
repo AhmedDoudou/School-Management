@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+   <div class="col-lg-12">
+      <div class="card">
+         <div class="card-header">
+            <h5 class="card-title">Add Student</h5>
+         </div>
+         {% if messages %}
+                        {% for message in messages %}
+                           {% if message.tags == 'success' %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                          <strong>{{ message }}</strong>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+          </div>
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+         <div class="card-body">
+
+<!-- §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ FORM §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ -->
+            <form method="post" action="{% url 'student_save' %}" enctype="multipart/form-data">
+               {% csrf_token%}
+               <div class="form-group row">
+                  <label class="col-form-label col-md-2">Picture Profile</label>
+                  <div class="col-md-10">
+                     <input name ="profile_pic" class="form-control" type="file">
+                  </div>
+               </div>
+                <div class="form-group row">
+                  <label class="col-form-label col-md-2">First Name</label>
+                  <div class="col-md-10">
+                     <input name="first_name" type="text" value="" class="form-control">
+                  </div>
+
+               </div>
+
+               <div class="form-group row">
+                  <label class="col-form-label col-md-2">Last Name</label>
+                  <div class="col-md-10">
+                     <input name="last_name" value="" type="text" class="form-control">
+                  </div>
+
+               </div>
+               
+               
+                
+               <div class="form-group row">
+                  <label class="col-form-label col-md-2">Email</label>
+                  <div class="col-md-10">
+                     <input name="email"  value="" type="email" class="form-control" placeholder="Placeholder">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label class="col-form-label col-md-2">Birthday</label>
+                  <div class="col-md-10">
+                     <input name="birthday"  value="" type="text" class="form-control" placeholder="Placeholder">
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label class="col-form-label col-md-2">Address</label>
+                  <div class="col-md-10">
+                     <input name="address"  value="" type="address" class="form-control" placeholder="Placeholder">
+                  </div>
+               </div>
+
+                <div class="col-md-10">
+                              <select name="grade" class="form-control">
+                                 <option>Select Grade</option>
+                                 <option value="Tiny Makers"> Tiny Makers</option>
+                                 <option value="Mini Makers">Mini Makers </option>
+                                 <option value="Makers Champions">Makers Champions </option>
+                              </select>
+                    </div>
+                  <div class="form-group row">
+                  <label class="col-form-label col-md-2">Mobile</label>
+                  <div class="col-md-10">
+                     <input name="mobile"  value="" type="phone" class="form-control" placeholder="Placeholder">
+                  </div>
+               </div>
+
+               <div class="form-group row">
+
+                  <div class="col-md-10">
+                     <input class="btn btn-primary" type="submit" value="Sauvegarder">
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+   </div>
+</div>
+</div>
+
+
+
+
+{% endblock%}

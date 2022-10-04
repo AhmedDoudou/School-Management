@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Students table</h6>
+              </div>
+              <div class="d-flex flex-column justify-content-center">
+                <a href="{% url 'student:create'  %}" class=" btn btn-outline-primary ">
+                New Student
+              </a>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Full Name</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Level</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Genger</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gmail</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Age</th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for student in object_list %}
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            {% if student.picture %}
+                              <img src="{{student.picture.url}}" class="avatar avatar-sm me-3 border-radius-lg" alt="xd">
+                              {% else %}
+                              <img src="{% static 'img/profile.jpg' %}" class="avatar avatar-sm me-3" alt="xd">
+                              {% endif %}
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm"><a href="{% url 'student:detail' student.id  %}" >
+                               {{student.first_name}}  {{student.last_name}}
+                            </a></h6>
+                            <p class="text-xs text-secondary mb-0"></p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xs font-weight-bold mb-0">{{student.level}}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xs font-weight-bold mb-0">{{student.gender}}</p>
+                      </td>
+                      <td class="align-middle text-center">
+                        <p class="text-xs font-weight-bold mb-0">{{student.email}}</p>
+                      </td>
+                      {% if student.is_active %}
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge badge-sm bg-gradient-success">Active</span>
+                      </td>
+                      {% else %}
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge badge-sm bg-gradient-danger">Deactive</span>
+                      </td>
+                      {% endif %}
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold">{{student.age}}</span>
+                      </td>
+                      <td class="align-middle">
+                        <a href="{% url 'student:update' student.id %}" class="text-secondary font-weight-bold text-xs text-success" data-toggle="tooltip" data-original-title="Edit user">
+                          Edit
+                        </a> |
+                        <a href="{% url 'student:delete' student.id %}" class="text-secondary font-weight-bold text-xs text-danger" data-toggle="tooltip" data-original-title="Edit user">
+                          Delete
+                        </a>
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center text-sm">
+                          <a href="{% url 'student:student_pdf' student.pk  %}" class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i class="material-icons text-lg position-relative me-1">picture_as_pdf</i> PDF</a>
+                        </div>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                      <td class="align-middle text-sm">
+                        <div class="d-flex flex-column justify-content-center">
+                         
+                          <p class="text-xs text-secondary mb-0"></p>
+                        </div>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+{% include "footer.html" %}

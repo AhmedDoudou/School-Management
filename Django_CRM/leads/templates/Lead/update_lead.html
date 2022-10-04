@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load tailwind_filters %} {% block content %}
+
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest"> Lead</h2>
+                <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">{{lead.first_name}}</h1>
+                <div class="flex mb-4">
+                    <a href="{% url 'leads:detail-lead' lead.id %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1py-2">Description</a>
+                    <a href="{% url 'leads:update-lead' lead.id %}" class="flex-grow text-purple-500 border-b-2 border-purple-500  text-lg px-1">Update</a>
+                    <a href="{% url 'leads:delete-lead' lead.id %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Delete</a>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %} {{ form|crispy }}
+                    <div>
+                        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                      <!-- Heroicon name: solid/lock-closed -->
+                      
+                    </span>
+                    Update
+                  </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,75 @@
+/* WP Froms addon*/
+
+.rt-wpforms-wrapper ::placeholder {
+    color: #9ca2a5;
+}
+.rt-wpforms-wrapper {
+    border-radius: 5px;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: inherit;
+}
+.rt-wpforms-wrapper .wpforms-container .wpforms-field-container {
+    padding: 0;
+}
+.rt-wpforms-wrapper .wpforms-container .wpforms-head-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.rt-wpforms-wrapper .wpforms-container .wpforms-head-container .wpforms-title {
+    color: #3c424c;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.rt-wpforms-wrapper .wpforms-container .wpforms-head-container .wpforms-title span {
+    color: #ff1f59;
+}
+.rt-wpforms-wrapper .wpforms-container .wpforms-head-container .wpforms-description {
+    font-size: 30px;
+    font-weight: 600;
+    color: #3c424c;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.rt-wpforms-wrapper div.wpforms-container.wpforms-container-full .wpforms-form .wpforms-submit-container {
+    padding: 0;
+    text-align: center;
+}
+.rt-wpforms-wrapper .wpforms-form .wpforms-submit-container input[type=submit], .rt-wpforms-wrapper .wpforms-form .wpforms-submit-container button[type=submit] {
+    background-color: #ff1f59;
+    width: 100%;
+    padding: 15px 0;
+    border: 1px solid #ff1f59;
+    font-size: 15px;
+    line-height: 17px!important;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 3px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.rt-wpforms-wrapper .wpforms-form .wpforms-submit-container input[type=submit]:hover, .rt-wpforms-wrapper .wpforms-form .wpforms-submit-container button[type=submit]:hover {
+    color: #fff;
+    border-color: #ff1f59;
+    background-color: #ff1f59;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+.rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=date], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=datetime], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=datetime-local], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=email], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=month], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=number], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=password], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=range], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=search], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=tel], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=text], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=time], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=url], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form input[type=week], .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form select, .rt-wpforms-wrapper div.wpforms-container-full .wpforms-form textarea {
+    color: #686f7a;
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 3px;
+    background: transparent;
+}
+.rt-wpforms-wrapper div.wpforms-container-full .wpforms-form textarea.wpforms-field-large {
+    height: 100px;
+    padding: 15px 30px;
+}
+.rt-wpforms-wrapper div.wpforms-container-full .wpforms-form .wpforms-field {
+    padding: 13px 0;
+}

@@ -1,0 +1,149 @@
+/*--------------------------------------------------------------
+Paid Membership pro plugin
+--------------------------------------------------------------*/
+
+.pmpro-has-access #pmpro_account .pmpro_box h3 {
+    margin: inherit;
+}
+.pmpro-levels .pmpro-has-access .entry-content {
+    overflow-x: auto
+}
+.pmpro_message.pmpro_message {
+    margin: 0 0 20px;
+    border-radius: 5px;
+    padding: 13px 15px;
+}
+.type-page .entry-content .lp-pmpro-membership-list h2 {
+    padding-bottom: 0;
+}
+.lp-pmpro-membership-list td, .lp-pmpro-membership-listth {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+#pmpro_form td {
+    padding: 10px 20px;
+}
+form.pmpro_form label, #loginform label {
+    padding: 10px 0;
+}
+form.pmpro_form .input, form.pmpro_form textarea, form.pmpro_form select, #loginform input[type=text], #loginform input[type=password] {
+    width: 100%;
+}
+.single-lp_course #learn-press-pmpro-notice.purchase-course {
+    width: 100%;
+}
+.single-lp_course #learn-press-pmpro-notice.purchase-course a {
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.learn-press-course-current {
+    background: #f0f0f0;
+}
+.pmpro-no-buy-course+.purchase-course, .pmpro-no-buy-course+.enroll-course {
+    display: none !important;
+}
+#learn-press-pmpro-notice+.purchase-course, #learn-press-pmpro-notice+.enroll-course {
+    display: inline-block;
+}
+.lp-pmpro-membership-list {
+    margin: 0;
+}
+.lp-pmpro-membership-list.show-mobile {
+    display: none;
+}
+.lp-pmpro-membership-list .item-none {
+    color: #d85554;
+    font-size: 16px;
+}
+.lp-pmpro-membership-list .item-check {
+    color: #7ed321;
+    font-size: 16px;
+}
+.lp-pmpro-membership-list .lp-title {
+    display: block;
+    font-size: 28px;
+}
+.lp-pmpro-membership-list .lp-price {
+    display: block;
+    margin-top: 10px;
+    color: var(--gostudy-secondary-color);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.lp-pmpro-membership-list .lp-price .amount {
+    font-size: inherit;
+}
+.lp-pmpro-membership-list .lp-desc {
+    color: #696969;
+    font-weight: 400;
+    margin: 10px 0 0;
+}
+.lp-pmpro-membership-list thead th {
+    padding: 30px 20px;
+    text-align: center;
+}
+.lp-pmpro-membership-list tbody td {
+    padding: 10px 20px;
+}
+.lp-pmpro-membership-list tbody .list-main a {
+    font-weight: 500;
+}
+.lp-pmpro-membership-list tbody .list-main a {
+    color: var(--gostudy-header-font-color);
+}
+.lp-pmpro-membership-list tbody .list-main a:hover {
+    color: var( --gostudy-primary-color);
+}
+.lp-pmpro-membership-list tbody .list-main {
+    text-align: left;
+}
+.lp-pmpro-membership-list .lp-pmpro-footer td {
+    padding: 30px 10px 40px;
+}
+.lp-pmpro-membership-list .pmpro_btn, .lp-pmpro-membership-list .pmpro_btn:link, .lp-pmpro-membership-list .pmpro_content_message a, .lp-pmpro-membership-list .pmpro_content_message a:link {
+    color: #fff;
+    background-color: var(--gostudy-button-color-idle);
+    border-color: var(--gostudy-button-color-idle);
+    text-transform: capitalize;
+    padding: 12px 2em;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 700;
+    transition: .3s;
+}
+.pmpro_btn, .pmpro_btn:link, .pmpro_content_message a, .pmpro_content_message a:link {
+    color: #fff;
+    background-color: var(--gostudy-button-color-idle);
+    border-color: var(--gostudy-button-color-idle);
+    text-transform: capitalize;
+    padding: 15px 2em;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: none;
+    transition: .3s;
+}
+.pmpro_btn:hover, a.pmpro_btn:hover, .entry-content a.pmpro_btn:hover, .pmpro_btn:focus, .pmpro_checkout .pmpro_btn:hover, .pmpro_checkout .pmpro_btn:focus, .pmpro_content_message a:focus, .pmpro_content_message a:hover {
+    color: #fff;
+    background-color: var(--gostudy-button-rgb-hover);
+    border-color: var(--gostudy-button-rgb-hover);
+    text-decoration: none;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}

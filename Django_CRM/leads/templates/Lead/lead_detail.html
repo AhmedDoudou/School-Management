@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto ">
+            <div class="lg:w-1/2 w-full  mb-6 ">
+                <h2 class="text-sm title-font text-gray-500 tracking-widest"> Lead</h2>
+                <div class="flex">
+                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-20 ml-20">{{lead.first_name}}</h1>
+                    <img alt="{{lead.first_name}}" class="h-20 w-20 rounded-full absolute " src="{{lead.profile_picture.url}}">
+                </div>
+                <div class="flex mb-4">
+                    <a href="{% url 'leads:detail-lead' lead.id %}" class="flex-grow text-purple-500 border-b-2 border-purple-500  text-lg px-1">Description</a>
+                    <a href="{% url 'leads:update-lead' lead.id %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1py-2">Update</a>
+                    <a href="{% url 'leads:delete-lead' lead.id %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Delete</a>
+                </div>
+                <p class="leading-relaxed mb-4">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin
+                    listicle pour-over, neutra jean.</p>
+                <div class="flex border-t border-gray-200 py-2">
+                    <span class="text-gray-500">Name</span>
+                    <span class="ml-auto text-gray-900"> {{lead.first_name}} {{lead.last_name}} </span>
+                </div>
+                <div class="flex border-t border-gray-200 py-2">
+                    <span class="text-gray-500">Age</span>
+                    <span class="ml-auto text-gray-900"> {{lead.age}} </span>
+                </div>
+                <div class="flex border-t border-b mb-6 border-gray-200 py-2">
+                    <span class="text-gray-500">Agent</span>
+                    <span class="ml-auto text-gray-900"> {{lead.agent}} </span>
+                </div>
+            </div>
+        </div>
+        <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto mb-10">
+                <a href="{% url 'leads:lead-create-followup' lead.pk %}" class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 px-10 py-2 shadow-sm ">
+                    <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
+                    <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
+                </svg> New FollowUp
+                </a>
+        </div>
+        {% for followup in lead.followups.all %}
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500">
+                Note (<a href="{% url 'leads:lead-update-followup' followup.pk %}" class="text-blue-400 hover:text-blue-700">Update</a>)
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                {{followup.note}}
+                </dd>
+            </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-500">
+                File
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                    <div class="w-0 flex-1 flex items-center">
+                        <!-- Heroicon name: solid/paper-clip -->
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="ml-2 flex-1 w-0 truncate">
+                        {{followup.files}}
+                        </span>
+                    </div>
+                    <div class="ml-4 flex-shrink-0">
+                        <a href="{{followup.files.url}}" download class="font-medium text-indigo-600 hover:text-indigo-500">
+                        Download
+                        </a>
+                    </div>
+                    </li>
+                </ul>
+                </dd>
+            </div>
+        {% endfor %}
+    </div>
+        
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,256 @@
+/* == TextColors
+        ---------------- */
+body .mec-event-grid-minimal .mec-modal-booking-button:hover,
+body .mec-events-timeline-wrap .mec-organizer-item a,
+body .mec-events-timeline-wrap .mec-organizer-item:after,
+body .mec-events-timeline-wrap .mec-shortcode-organizers i,
+body .mec-timeline-event .mec-modal-booking-button,
+body .mec-wrap .mec-map-lightbox-wp.mec-event-list-classic .mec-event-date,
+body .mec-timetable-t2-col .mec-modal-booking-button:hover,
+body .mec-event-container-classic .mec-modal-booking-button:hover,
+body .mec-calendar-events-side .mec-modal-booking-button:hover,
+body .mec-event-grid-yearly .mec-modal-booking-button,
+body .mec-events-agenda .mec-modal-booking-button,
+body .mec-event-grid-simple .mec-modal-booking-button,
+body .mec-event-list-minimal .mec-modal-booking-button:hover,
+body .mec-timeline-month-divider,
+body .mec-wrap.colorskin-custom .mec-totalcal-box .mec-totalcal-view span:hover,
+body .mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic .mec-selected-day,
+body .mec-wrap.colorskin-custom .mec-color,
+body .mec-wrap.colorskin-custom .mec-event-sharing-wrap .mec-event-sharing>li:hover a,
+body .mec-wrap.colorskin-custom .mec-color-hover:hover,
+body .mec-wrap.colorskin-custom .mec-color-before *:before,
+body .mec-wrap.colorskin-custom .mec-widget .mec-event-grid-classic.owl-carousel .owl-nav i,
+body .mec-wrap.colorskin-custom .mec-event-list-classic a.magicmore:hover,
+body .mec-wrap.colorskin-custom .mec-event-grid-simple:hover .mec-event-title,
+body .mec-wrap.colorskin-custom .mec-single-event .mec-event-meta dd.mec-events-event-categories:before,
+body .mec-wrap.colorskin-custom .mec-single-event-date:before,
+body .mec-wrap.colorskin-custom .mec-single-event-time:before,
+body .mec-wrap.colorskin-custom .mec-events-meta-group.mec-events-meta-group-venue:before,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month i,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-next-month:hover,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month:hover,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-next-month:hover,
+body .mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic dt.mec-selected-day:hover,
+body .mec-wrap.colorskin-custom .mec-infowindow-wp h5 a:hover,
+body .colorskin-custom .mec-events-meta-group-countdown .mec-end-counts h3,
+body .mec-calendar .mec-calendar-side .mec-next-month i,
+body .mec-wrap .mec-totalcal-box i,
+body .mec-calendar .mec-event-article .mec-event-title a:hover,
+body .mec-attendees-list-details .mec-attendee-profile-link a:hover,
+body .mec-wrap.colorskin-custom .mec-next-event-details li i,
+body .mec-next-event-details i:before,
+body .mec-marker-infowindow-wp .mec-marker-infowindow-count,
+body .mec-next-event-details a,
+body .mec-wrap.colorskin-custom .mec-events-masonry-cats a.mec-masonry-cat-selected,
+body .lity .mec-color,
+body .lity .mec-color-before:before,
+body .lity .mec-color-hover:hover,
+body .lity .mec-wrap .mec-color,
+body .lity .mec-wrap .mec-color-before:before,
+body .lity .mec-wrap .mec-color-hover:hover,
+body .leaflet-popup-content .mec-color,
+body .leaflet-popup-content .mec-color-before:before,
+body .leaflet-popup-content .mec-color-hover:hover,
+body .leaflet-popup-content .mec-wrap .mec-color,
+body .leaflet-popup-content .mec-wrap .mec-color-before:before,
+body .leaflet-popup-content .mec-wrap .mec-color-hover:hover,
+body .mec-calendar.mec-calendar-daily .mec-calendar-d-table .mec-daily-view-day.mec-daily-view-day-active.mec-color,
+body .mec-map-boxshow div .mec-map-view-event-detail.mec-event-detail i,
+body .mec-map-boxshow div .mec-map-view-event-detail.mec-event-detail:hover,
+body .mec-map-boxshow .mec-color,
+body .mec-map-boxshow .mec-color-before:before,
+body .mec-map-boxshow .mec-color-hover:hover,
+body .mec-map-boxshow .mec-wrap .mec-color,
+body .mec-map-boxshow .mec-wrap .mec-color-before:before,
+body .mec-map-boxshow .mec-wrap .mec-color-hover:hover,
+body .mec-choosen-time-message,
+body .mec-booking-calendar-month-navigation .mec-next-month:hover,
+body .mec-booking-calendar-month-navigation .mec-previous-month:hover,
+body .mec-yearly-view-wrap .mec-agenda-event-title a:hover,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year i,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year i,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year:hover,
+body .mec-av-spot .mec-av-spot-head .mec-av-spot-box span,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month:hover .mec-load-month-link,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-next-month:hover .mec-load-month-link,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year:hover .mec-load-month-link,
+body .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover .mec-load-month-link,
+body .mec-skin-list-events-container .mec-data-fields-tooltip .mec-data-fields-tooltip-box ul .mec-event-data-field-item a,
+body .mec-booking-shortcode .mec-event-ticket-name,
+body .mec-booking-shortcode .mec-event-ticket-price,
+body .mec-booking-shortcode .mec-ticket-variation-name,
+body .mec-booking-shortcode .mec-ticket-variation-price,
+body .mec-booking-shortcode label,
+body .mec-booking-shortcode .nice-select,
+body .mec-booking-shortcode input,
+body .mec-booking-shortcode span.mec-book-price-detail-description,
+body .mec-booking-shortcode .mec-ticket-name,
+body .mec-booking-shortcode label.wn-checkbox-label {
+    color: var(--gostudy-primary-color);
+}
+
+/* == Backgrounds
+        ----------------- */
+body .mec-skin-carousel-container .mec-event-footer-carousel-type3 .mec-modal-booking-button:hover,
+body .mec-wrap.colorskin-custom .mec-event-sharing .mec-event-share:hover .event-sharing-icon,
+body .mec-wrap.colorskin-custom .mec-event-grid-clean .mec-event-date,
+body .mec-wrap.colorskin-custom .mec-event-list-modern .mec-event-sharing>li:hover a i,
+body .mec-wrap.colorskin-custom .mec-event-list-modern .mec-event-sharing .mec-event-share:hover .mec-event-sharing-icon,
+body .mec-wrap.colorskin-custom .mec-event-list-modern .mec-event-sharing li:hover a i,
+body .mec-wrap.colorskin-custom .mec-calendar:not(.mec-event-calendar-classic) .mec-selected-day,body .mec-wrap.colorskin-custom .mec-calendar .mec-selected-day:hover,body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-row dt.mec-has-event:hover,body .mec-wrap.colorskin-custom .mec-calendar .mec-has-event:after,body .mec-wrap.colorskin-custom .mec-bg-color,body .mec-wrap.colorskin-custom .mec-bg-color-hover:hover,body .colorskin-custom .mec-event-sharing-wrap:hover>li,body .mec-wrap.colorskin-custom .mec-totalcal-box .mec-totalcal-view span.mec-totalcalview-selected,body .mec-wrap .flip-clock-wrapper ul li a div div.inn,body .mec-wrap .mec-totalcal-box .mec-totalcal-view span.mec-totalcalview-selected,body .event-carousel-type1-head .mec-event-date-carousel,body .mec-event-countdown-style3 .mec-event-date,body #wrap .mec-wrap article.mec-event-countdown-style1,body .mec-event-countdown-style1 .mec-event-countdown-part3 a.mec-event-button,body .mec-wrap .mec-event-countdown-style2,body .mec-map-get-direction-btn-cnt input[type="submit"],body .mec-booking button,span.mec-marker-wrap,body .mec-wrap.colorskin-custom .mec-timeline-events-container .mec-timeline-event-date:before,body .mec-has-event-for-booking.mec-active .mec-calendar-novel-selected-day,body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date.mec-active,body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date:hover,body .mec-ongoing-normal-label,.mec-calendar .mec-has-event:after,body .mec-event-list-modern .mec-event-sharing li:hover .telegram {
+    background-color: var(--gostudy-primary-color);
+}
+
+body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date:hover,
+body .mec-calendar-day.mec-active .mec-booking-tooltip.multiple-time .mec-booking-calendar-date.mec-active {
+    background-color: var(--gostudy-primary-color);
+}
+
+/* == BorderColors
+        ------------------ */
+body .mec-skin-carousel-container .mec-event-footer-carousel-type3 .mec-modal-booking-button:hover,
+body .mec-timeline-month-divider,
+body .mec-wrap.colorskin-custom .mec-single-event .mec-speakers-details ul li .mec-speaker-avatar a:hover img,
+body .mec-wrap.colorskin-custom .mec-event-list-modern .mec-event-sharing>li:hover a i,
+body .mec-wrap.colorskin-custom .mec-event-list-modern .mec-event-sharing .mec-event-share:hover .mec-event-sharing-icon,
+body .mec-wrap.colorskin-custom .mec-event-list-standard .mec-month-divider span:before,
+body .mec-wrap.colorskin-custom .mec-single-event .mec-social-single:before,
+body .mec-wrap.colorskin-custom .mec-single-event .mec-frontbox-title:before,
+body .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-events-side .mec-table-side-day,
+body .mec-wrap.colorskin-custom .mec-border-color,
+body .mec-wrap.colorskin-custom .mec-border-color-hover:hover,
+body .colorskin-custom .mec-single-event .mec-frontbox-title:before,
+body .colorskin-custom .mec-single-event .mec-wrap-checkout h4:before,
+body .colorskin-custom .mec-single-event .mec-events-meta-group-booking form>h4:before,
+body .mec-wrap.colorskin-custom .mec-totalcal-box .mec-totalcal-view span.mec-totalcalview-selected,
+body .mec-wrap .mec-totalcal-box .mec-totalcal-view span.mec-totalcalview-selected,
+body .event-carousel-type1-head .mec-event-date-carousel:after,
+body .mec-wrap.colorskin-custom .mec-events-masonry-cats a.mec-masonry-cat-selected,
+body .mec-marker-infowindow-wp .mec-marker-infowindow-count,
+body .mec-wrap.colorskin-custom .mec-events-masonry-cats a:hover,
+body .mec-has-event-for-booking .mec-calendar-novel-selected-day,
+body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date.mec-active,
+body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date:hover,
+body .mec-virtual-event-history h3:before,
+body .mec-booking-tooltip.multiple-time .mec-booking-calendar-date:hover,
+body .mec-calendar-day.mec-active .mec-booking-tooltip.multiple-time .mec-booking-calendar-date.mec-active,
+body .mec-rsvp-form-box form>h4:before,
+body .mec-wrap .mec-box-title::before,
+body .mec-box-title::before {
+    border-color: var(--gostudy-primary-color);
+}
+
+body .mec-wrap.colorskin-custom .mec-event-countdown-style3 .mec-event-date:after,
+body .mec-wrap.colorskin-custom .mec-month-divider span:before,
+body .mec-calendar.mec-event-container-simple dl dt.mec-selected-day,
+body .mec-calendar.mec-event-container-simple dl dt.mec-selected-day:hover {
+    border-bottom-color: var(--gostudy-primary-color);
+}
+
+body .mec-wrap.colorskin-custom article.mec-event-countdown-style1 .mec-event-countdown-part2:after {
+    border-color: transparent transparent transparent var(--gostudy-primary-color);
+}
+
+/* == BoxShadow
+        ------------------ */
+body .mec-wrap.colorskin-custom .mec-box-shadow-color {
+    box-shadow: 0 4px 22px -7px var(--gostudy-primary-color);
+}
+
+/* == Booking Shortcode
+        ------------------ */
+body .mec-booking-shortcode input::-webkit-input-placeholder,
+body .mec-booking-shortcode textarea::-webkit-input-placeholder {
+    color: var(--gostudy-primary-color);
+}
+
+body .mec-booking-shortcode textarea::-moz-placeholder {
+    color: var(--gostudy-primary-color);
+}
+
+body .mec-booking-shortcode input:-ms-input-placeholder,
+body .mec-booking-shortcode textarea:-ms-input-placeholder {
+    color: var(--gostudy-primary-color);
+}
+
+body .mec-booking-shortcode input:-moz-placeholder,
+body .mec-booking-shortcode textarea:-moz-placeholder {
+    color: var(--gostudy-primary-color);
+}
+
+body .mec-booking-shortcode label.wn-checkbox-label:after,
+body .mec-booking-shortcode label.wn-checkbox-label:before,
+body .mec-booking-shortcode input[type=radio]:checked:after {
+    background-color: var(--gostudy-primary-color);
+}
+
+/* == New color style*/
+body .mec-event-footer .mec-booking-button {
+    background-color: var(--gostudy-button-color-idle);
+    border-color: var(--gostudy-button-color-idle);
+    color: #fff;
+}
+
+body .mec-event-footer .mec-booking-button:hover {
+    background-color: var(--gostudy-button-color-hover);
+    border-color: var(--gostudy-button-color-hover);
+    color: #fff;
+}
+
+body .mec-load-more-button:hover {
+    background-color: var(--gostudy-button-color-hover);
+    border-color: var(--gostudy-button-color-hover);
+    color: #fff;
+}
+
+body .mec-events-meta-group-countdown .countdown-w span {
+    color: var(--gostudy-header-font-color);
+}
+
+body .mec-single-event .mec-event-export-module.mec-frontbox .mec-event-exporting .mec-export-details ul li a:hover {
+    color: #fff;
+}
+
+body .mec-wrap .mec-timeline-event-content a.mec-timeline-readmore:hover {
+    background: var(--gostudy-button-color-hover);
+}
+
+body .mec-event-countdown-style3 .mec-event-date:after {
+    border-color: transparent transparent var(--gostudy-primary-color) transparent;
+}
+
+body .mec-bg-color,
+body .mec-bg-color-hover:hover,
+body .mec-wrap .mec-bg-color,
+body .mec-wrap .mec-bg-color-hover:hover {
+    background-color: var(--gostudy-primary-color);
+}
+
+body .mec-box-marker,
+body .mec-vip-content-notice {
+    box-shadow: 5px 0 0 var(--gostudy-primary-color) inset;
+}
+
+body .mec-border-color,
+body .mec-border-color-hover:hover,
+body .mec-wrap .mec-border-color,
+body .mec-wrap .mec-border-color-hover:hover {
+    border-color: var(--gostudy-primary-color);
+}
+
+body .mec-color, 
+body .mec-color-before:before, 
+body .mec-color-hover:hover, 
+body .mec-wrap .mec-color, 
+body .mec-wrap .mec-color-before :before, 
+body .mec-wrap .mec-color-hover:hover {
+    color: var(--gostudy-primary-color);
+}
+body .mec-event-sharing-wrap:hover>li {
+    background-color: var(--gostudy-primary-color);
+}
+body .mec-single-event .mec-events-meta-group-booking form>h4:before, body .mec-single-event .mec-frontbox-title:before, body .mec-single-event .mec-wrap-checkout h4:before{
+border-bottom: 4px solid var(--gostudy-primary-color);
+}

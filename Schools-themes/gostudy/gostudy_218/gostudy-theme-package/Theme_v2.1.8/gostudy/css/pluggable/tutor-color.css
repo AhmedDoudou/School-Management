@@ -1,0 +1,42 @@
+
+/* ==================== ##Colors ==================== */
+
+:root {
+    --tutor-color-primary: var(--gostudy-primary-color);
+    --tutor-primary-color: var(--gostudy-primary-color);
+    --tutor-primary-hover-color: var(--gostudy-btn-bg-hover-color);
+    --tutor-color-primary-hover: var(--gostudy-button-color-hover);
+    --tutor-primary: var(--gostudy-primary-color);
+}
+.text-primary {
+    color: var( --gostudy-tertiary-color) !important;
+}
+.tutor-color-primary-60 {
+    color: #fff;
+}
+.tutor-color-muted {
+    color: var(--gostudy-content-color);
+}
+.tutor-color-black-60, table.tutor-ui-table .td-list-item .tutor-form-check label, .tutor-default-tab .tab-header-item, .tutor-default-tab .tab-header-item-seemore-toggle, .tutor-course-details-page .tutor-course-details-tab .tab-item-content p {
+    color: var(--gostudy-meta-color);
+}
+.tutor-default-tab .tab-header-item {
+    color: var( --gostudy-tertiary-color);
+}
+.tutor-ratings-progress-bar .tutor-progress-value {
+    background-color: #ffb60a;
+}
+.tutor-ratings-stars {
+    color: #ffb60a;
+}
+
+.tutor-btn {
+    border-color: var(--tutor-color-primary);
+    background-color: var(--tutor-color-primary);
+    color: #FFFFFF;
+}
+.tutor-btn:hover {
+    border-color: var(--tutor-color-primary-hover);
+    background-color: var(--tutor-color-primary-hover);
+    color: #FFFFFF;
+}

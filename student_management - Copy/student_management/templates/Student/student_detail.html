@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+   <div class="col-lg-12">
+      <div class="card">
+         <div class="card-header">
+            <h5 class="card-title">Liste des étudiants </h5>
+         </div>
+         {% if messages %}
+         {% for message in messages %}
+         {% if message.tags == 'success' %}
+         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         {% endif %}
+         {% endfor %}
+         {% endif %}
+         <div class="card-body">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="about-info">
+                     <h4>About Me</h4>
+                     <div class="media mt-3">
+                        <img src="{{student.profile_pic.url}}" class="mr-3" alt="...">
+                        <div class="media-body">
+                           <ul>
+                              <li>
+                                 <span class="title-span">Full Name : </span>
+                                 <span class="info-span">{{student.first_name}} {{student.last_name}}</span>
+                              </li>
+                              <li>
+                                 <span class="title-span">Grade : </span>
+                                 <span class="info-span">{{student.grade}}</span>
+                              </li>
+                              <li>
+                                 <span class="title-span">Program </span>
+                                 <span class="info-span">+91 89657 48512</span>
+                              </li>
+                              <li>
+                                 <span class="title-span">Email : </span>
+                                 <span class="info-span"><a href="https://preschool.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7216131b010b32151f131b1e5c111d1f">[email&#160;protected]</a></span>
+                              </li>
+                              <li>
+                                 <span class="title-span">Gender : </span>
+                                 <span class="info-span">Male</span>
+                              </li>
+                              <li>
+                                 <span class="title-span">DOB : </span>
+                                 <span class="info-span">22 Apr 1995</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="row mt-3">
+                        <div class="col-md-12">
+                           <p>Hello I am Daisy Parks. Lorem Ipsum is simply dummy text of the printing and typesetting industry, simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                     </div>
+                     <div class="row follow-sec">
+                        <div class="col-md-4 mb-3">
+                           <div class="blue-box">
+                              <h3>2850</h3>
+                              <p>Followers</p>
+                           </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                           <div class="blue-box">
+                              <h3>2050</h3>
+                              <p>Following</p>
+                           </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                           <div class="blue-box">
+                              <h3>2950</h3>
+                              <p>Friends</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row mt-2">
+                        <div class="col-md-12">
+                           <h5>Permanent Address</h5>
+                           <p>480, Estern Avenue, Courtage area, New York</p>
+                        </div>
+                     </div>
+                     <div class="row mt-2">
+                        <div class="col-md-12">
+                           <h5>Present Address</h5>
+                           <p>480, Estern Avenue, Courtage area, New York</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock%}

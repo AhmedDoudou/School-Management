@@ -1,0 +1,129 @@
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-price{
+    color: var(--gostudy-header-font-color);
+}
+
+/* --gostudy-primary-color */
+
+.learndash-wrapper .ld-tertiary-background {
+    background-color: var(--gostudy-primary-color) !important;
+}
+.learndash-wrapper .ld-expand-button {
+    background-color: var(--gostudy-primary-color);
+}
+.learndash-wrapper .ld-item-list .ld-item-list-item.ld-is-next, .learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label:focus-within {
+    border-color: var(--gostudy-primary-color);
+}
+.learndash-wrapper .ld-breadcrumbs a, .learndash-wrapper .ld-lesson-item.ld-is-current-lesson .ld-lesson-item-preview-heading, .learndash-wrapper .ld-lesson-item.ld-is-current-lesson .ld-lesson-title, .learndash-wrapper .ld-primary-color-hover:hover, .learndash-wrapper .ld-primary-color, .learndash-wrapper .ld-primary-color-hover:hover, .learndash-wrapper .ld-primary-color, .learndash-wrapper .ld-tabs .ld-tabs-navigation .ld-tab.ld-active, .learndash-wrapper .ld-button.ld-button-transparent, .learndash-wrapper .ld-button.ld-button-reverse, .learndash-wrapper .ld-icon-certificate, .learndash-wrapper .ld-login-modal .ld-login-modal-login .ld-modal-heading, #wpProQuiz_user_content a, .learndash-wrapper .ld-item-list .ld-item-list-item a.ld-item-name:hover, .learndash-wrapper .ld-focus-comments__heading-actions .ld-expand-button, .learndash-wrapper .ld-focus-comments__heading a, .learndash-wrapper .ld-focus-comments .comment-respond a, .learndash-wrapper .ld-focus-comment .ld-comment-reply a.comment-reply-link:hover, .learndash-wrapper .ld-expand-button.ld-button-alternate {
+    color: var(--gostudy-header-font-color) !important;
+}
+.learndash-wrapper .ld-focus-comment.bypostauthor>.ld-comment-wrapper, .learndash-wrapper .ld-focus-comment.role-group_leader>.ld-comment-wrapper, .learndash-wrapper .ld-focus-comment.role-administrator>.ld-comment-wrapper {
+    background-color: rgba(<?php echo esc_attr( $primaryRgb);
+    ?>, 0.03) !important;
+}
+.learndash-wrapper .ld-primary-background, .learndash-wrapper .ld-tabs .ld-tabs-navigation .ld-tab.ld-active:after {
+    background: var(--gostudy-primary-color);
+}
+.learndash-wrapper .ld-course-navigation .ld-lesson-item.ld-is-current-lesson .ld-status-incomplete, .learndash-wrapper .ld-focus-comment.bypostauthor:not(.ptype-sfwd-assignment)>.ld-comment-wrapper>.ld-comment-avatar img, .learndash-wrapper .ld-focus-comment.role-group_leader>.ld-comment-wrapper>.ld-comment-avatar img, .learndash-wrapper .ld-focus-comment.role-administrator>.ld-comment-wrapper>.ld-comment-avatar img {
+    border-color: var(--gostudy-primary-color) !important;
+}
+.learndash-wrapper .ld-loading::before {
+    border-top: 3px solid var(--gostudy-primary-color);
+}
+.learndash-wrapper .ld-button:hover:not(.learndash-link-previous-incomplete):not(.ld-button-transparent), #learndash-tooltips .ld-tooltip:after, #learndash-tooltips .ld-tooltip, .learndash-wrapper .ld-primary-background, .learndash-wrapper .btn-join, .learndash-wrapper #btn-join, .learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent), .learndash-wrapper .ld-expand-button, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button:not(.wpProQuiz_button_reShowQuestion):not(.wpProQuiz_button_restartQuiz), .learndash-wrapper .wpProQuiz_content .wpProQuiz_button2, .learndash-wrapper .ld-focus .ld-focus-sidebar .ld-course-navigation-heading, .learndash-wrapper .ld-focus .ld-focus-sidebar .ld-focus-sidebar-trigger, .learndash-wrapper .ld-focus-comments .form-submit #submit, .learndash-wrapper .ld-login-modal input[type='submit'], .learndash-wrapper .ld-login-modal .ld-login-modal-register, .learndash-wrapper .wpProQuiz_content .wpProQuiz_certificate a.btn-blue, .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-user-menu-items a, #wpProQuiz_user_content table.wp-list-table thead th, #wpProQuiz_overlay_close, .learndash-wrapper .ld-expand-button.ld-button-alternate .ld-icon {
+    background-color: var(--gostudy-primary-color) !important;
+}
+
+.learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-user-menu-items:before {
+    border-bottom-color: var(--gostudy-primary-color);
+}
+.learndash-wrapper .ld-button.ld-button-transparent:hover {
+    background: transparent !important;
+}
+.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button, .learndash-wrapper .ld-button.ld-button-transparent, .learndash-wrapper .ld-button.ld-button-alternate, .learndash-wrapper .ld-expand-button.ld-button-alternate {
+    background-color: transparent !important;
+}
+.learndash-wrapper .ld-focus-header .ld-user-menu .ld-user-menu-items a, .learndash-wrapper .ld-button.ld-button-reverse:hover, .learndash-wrapper .ld-alert-success .ld-alert-icon.ld-icon-certificate, .learndash-wrapper .ld-alert-warning .ld-button:not(.learndash-link-previous-incomplete), .learndash-wrapper .ld-primary-background.ld-status {
+    color: white !important;
+}
+.learndash-wrapper .ld-status.ld-status-unlocked {
+    background-color: rgb( var(--gostudy-primary-color), '0.2');
+    color: var(--gostudy-primary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_addToplist {
+    background-color: rgb( var(--gostudy-primary-color), '0.1');
+    border: 1px solid var(--gostudy-primary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_toplistTable th {
+    background: var(--gostudy-primary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_toplistTrOdd {
+    background-color: rgb( var(--gostudy-primary-color), '0.1');
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewDiv li.wpProQuiz_reviewQuestionTarget {
+    background-color: var(--gostudy-primary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_time_limit .wpProQuiz_progress {
+    background-color: var(--gostudy-primary-color);
+}
+/* Secondary color*/
+.learndash-wrapper #learndash_mark_complete_button:hover, .learndash-wrapper .learndash_mark_complete_button:hover{
+       background-color: var(--gostudy-secondary-color);   
+}
+.learndash-wrapper #quiz_continue_link, .learndash-wrapper .ld-secondary-background, .learndash-wrapper .learndash_mark_complete_button, .learndash-wrapper #learndash_mark_complete_button, .learndash-wrapper .ld-status-complete, .learndash-wrapper .ld-alert-success .ld-button, .learndash-wrapper .ld-alert-success .ld-alert-icon {
+    background-color: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .wpProQuiz_content a#quiz_continue_link {
+    background-color: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .course_progress .sending_progress_bar {
+    background: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_button_reShowQuestion:hover, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button_restartQuiz:hover {
+    background-color: var(--gostudy-secondary-color);
+    opacity: 0.75;
+}
+.learndash-wrapper .ld-secondary-color-hover:hover, .learndash-wrapper .ld-secondary-color, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete:after {
+    color: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .ld-secondary-in-progress-icon {
+    border-left-color: var(--gostudy-secondary-color);
+    border-top-color: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .ld-alert-success {
+    border-color: var(--gostudy-secondary-color);
+    background-color: transparent !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionSolved, .learndash-wrapper .wpProQuiz_content .wpProQuiz_box li.wpProQuiz_reviewQuestionSolved {
+    background-color: var(--gostudy-secondary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewLegend span.wpProQuiz_reviewColor_Answer {
+    background-color: var(--gostudy-secondary-color);
+}
+/* Tartary color*/
+
+.learndash-wrapper .ld-alert-warning {
+    background-color: transparent;
+}
+.learndash-wrapper .ld-status-waiting, .learndash-wrapper .ld-alert-warning .ld-alert-icon {
+    background-color: var(--gostudy-tertiary-color);
+}
+.learndash-wrapper .ld-tertiary-color-hover:hover, .learndash-wrapper .ld-tertiary-color, .learndash-wrapper .ld-alert-warning {
+    color: var(--gostudy-tertiary-color);
+}
+
+.learndash-wrapper .ld-alert-warning {
+    border-color: var(--gostudy-tertiary-color);
+}
+.learndash-wrapper .ld-tertiary-background, .learndash-wrapper .ld-alert-warning .ld-alert-icon {
+    color: white !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewQuestion li.wpProQuiz_reviewQuestionReview, .learndash-wrapper .wpProQuiz_content .wpProQuiz_box li.wpProQuiz_reviewQuestionReview {
+    background-color: var(--gostudy-tertiary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_reviewLegend span.wpProQuiz_reviewColor_Review {
+    background-color: var(--gostudy-tertiary-color);
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label.is-selected, .learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label:focus-within{
+    border-color: var(--gostudy-tertiary-color);
+}
+

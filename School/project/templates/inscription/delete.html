@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="container">
+    <div class="bg-light p-5 rounded">
+        <form method="post">
+            {% csrf_token %}
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                <div>
+                Are you sure that you wanna delete It !!
+                </div>
+            </div>
+            <input type="submit" value="Confirm">
+            </form>
+    </div>
+</main>
+
+{% endblock %}

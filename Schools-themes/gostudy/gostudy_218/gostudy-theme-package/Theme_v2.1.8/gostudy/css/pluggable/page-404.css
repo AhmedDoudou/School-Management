@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* ==================== ##Page 404 ==================== */
+body.error404 #main {
+  z-index: 1;
+  padding: 0;
+  margin-top: 0; }
+
+.page_404_wrapper {
+  position: relative;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center; }
+  .page_404_wrapper-container {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto; }
+  .page_404_wrapper .main_404-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 66px 0 130px;
+    background: #ffffff; }
+  .page_404_wrapper .banner_404 {
+    margin-top: 13px;
+    font-weight: bold;
+    letter-spacing: -4px;
+    white-space: nowrap; }
+    .page_404_wrapper .banner_404 img {
+      max-height: 301px; }
+    .page_404_wrapper .banner_404__digit {
+      font-size: 280px;
+      line-height: 0.93; }
+    .page_404_wrapper .banner_404_title {
+      margin-top: 43px; }
+      .page_404_wrapper .banner_404_title span {
+        font-size: 36px;
+        line-height: 1.277; }
+    .page_404_wrapper .banner_404_text {
+      margin-top: 11px;
+      margin-bottom: 41px;
+      font-size: 18px;
+      line-height: 30px; }
+  .page_404_wrapper .search-form .search-field,
+  .page_404_wrapper .search-form {
+    width: 100%;
+    max-width: 460px; }
+  .page_404_wrapper .search-form {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    transition: 0.45s; }
+    .page_404_wrapper .search-form .search-field {
+      margin-bottom: 0;
+      padding-left: 20px;
+      padding-right: 50px; }
+      .page_404_wrapper .search-form .search-field::placeholder {
+        font-size: 13px;
+        font-weight: 700;
+        outline: none;
+        -webkit-appearance: none;
+        text-transform: uppercase;
+        transition: 0.4s; }
+      .page_404_wrapper .search-form .search-field:focus::placeholder, .page_404_wrapper .search-form .search-field:active::placeholder {
+        opacity: 0; }
+    .page_404_wrapper .search-form:hover:after {
+      color: #ffffff; }
+  .page_404_wrapper .rt-particles-js {
+    top: 0;
+    left: 0; }
+  .page_404_wrapper .search-button {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    right: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 0;
+    cursor: pointer; }
+    .page_404_wrapper .search-button:focus, .page_404_wrapper .search-button:active {
+      box-shadow: none;
+      background: transparent; }
+  .page_404_wrapper .search__icon {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.4s; }
+  .page_404_wrapper .search-button:hover ~ .search__icon {
+    color: #ffffff; }
+
+.gostudy_404__button .rt-button {
+  color: #ffffff; }
+
+/**
+ * Search Page
+ */
+header.searсh-header {
+  margin-bottom: 30px; }
+  header.searсh-header .page-title {
+    font-size: 36px;
+    line-height: 1.65; }
+    header.searсh-header .page-title span {
+      font-size: 1.15em;
+      line-height: inherit; }
+
+.search-no-results header.searсh-header {
+  margin-bottom: 0; }
+
+.search-no-results .page_404_wrapper {
+  padding-bottom: 50px;
+  min-height: 100%; }
+  .search-no-results .page_404_wrapper .banner_404_text {
+    color: inherit;
+    font-size: 18px;
+    line-height: 28px; }
+  .search-no-results .page_404_wrapper .gostudy_404_button.rt_button .rt_button_link:hover {
+    color: #fff; }

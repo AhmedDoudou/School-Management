@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %} {% load static %} {% if not request.user.is_authenticated %}
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
+        <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="{% static 'img/crm.jpg' %}">
+        <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">CRM Built with Django</h1>
+            <p class="mb-8 leading-relaxed">this CRM helps you to manage your Leads.</p>
+
+            <div class="flex justify-center">
+                <a href=" {% url 'login' %}" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login to Start</a>
+            </div>
+
+            <div class="flex justify-center">
+            </div>
+
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">CRM Built with Django</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">this CRM helps you to manage your Leads.</p>
+        </div>
+        <div class="flex flex-wrap -m-4 text-center pr-4">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">{{last_thirty_days}}</h2>
+                    <p class="leading-relaxed">Leads added in last 30 days</p>
+                </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+            </svg>
+                    <h2 class="title-font font-medium text-3xl text-gray-900">{{total_leads}}</h2>
+                    <p class="leading-relaxed">Total Of Leads</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %} {% endblock content %}

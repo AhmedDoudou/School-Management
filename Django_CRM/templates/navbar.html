@@ -1,0 +1,36 @@
+{% load static %}
+<header class="text-gray-600 body-font bg-gray-100 rounded">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="{% url 'dashbord' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <div class="flex-shrink-0">
+                <img class="h-8 w-8" src="{% static 'img/logo.png' %}" alt="Workflow">
+            </div>
+            <a href="{% url 'dashbord' %}"><span class="ml-3 text-xl">DJ CRM</span></a>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center ">
+
+            {% if not request.user.is_authenticated %}
+
+            <a href=" {% url 'signup' %} " class="font-medium text-gree-600 hover:text-indigo-500 ml-5 rounded ">Sign up</a>
+            <a href=" {% url 'login' %} " class="font-medium text-indigo-600 hover:text-indigo-500 ml-5 rounded ">Log in</a>
+
+        </nav>
+
+        {% else %} {% if request.user.is_organisor %}
+        <a href=" {% url 'agents:agent' %} " class="mr-5 hover:text-gray-900">Agents</a> {% endif %}
+        <a href=" {% url 'leads:home' %} " class="mr-5 hover:text-gray-900">Leads</a>
+        <p> Welcome : {{ request.user.username }} </p>
+
+        {% if request.user.is_authenticated %}
+
+        <a href="{% url 'logout' %}" class="relative inline-flex items-center px-2 py-2 rounded-r-md bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+            <span class="sr-only">Next</span>
+            <!-- Heroicon name: solid/chevron-right -->
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>Logout
+        </a>
+        {% endif %} {% endif %}
+
+    </div>
+</header>

@@ -1,0 +1,13 @@
+/*
+Profile Builder – User Profile & User Registration Forms
+*/
+
+#select_user_to_edit_form .select2.select2-container.select2-container--default {
+    width: 100%!important;
+}
+#wppb-edit-user select#display-name {
+    width: 100%!important;
+}
+#select_user_to_edit_form .select__field {
+    max-width: 900px;
+}

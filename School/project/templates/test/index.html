@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% include 'sidebar.html' %}
+
+<div class=" main-content position-relative max-height-vh-100 h-100 ps ps--active-y">
+  {% include 'navbar.html' %}
+  {% load crispy_forms_tags %}
+  <div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-6">
+        <div class="card my-4">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+              <h6 class="text-white text-capitalize ps-3 text-center">New inscription</h6>
+              <p class="text-white text-capitalize text-center">Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
+            </div>
+          </div>
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <form role="form" class="form-floating" method='post' enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <table>
+                  {{ wizard.management_form }}
+                  {% if wizard.form.forms %}
+                    {{ wizard.form.management_form }}
+                    {% for form in wizard.form.forms %}
+                      {{ form}}
+                    {% endfor %}
+                  {% else %}
+                    {{ wizard.form }}
+                  {% endif %}
+                  </table>
+                  {% if wizard.steps.prev %}
+                  <button class="btn btn-primary " name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}">{% trans "first step" %}</button>
+                  <button class="btn btn-primary " name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">{% trans "prev step" %}</button>
+                  {% endif %}
+                  
+                  <div class="text-center">
+                    <input type="submit" class="btn btn-primary " value="{% trans 'submit' %}"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

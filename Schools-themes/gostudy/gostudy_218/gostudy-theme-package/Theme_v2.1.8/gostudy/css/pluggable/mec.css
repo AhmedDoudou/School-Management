@@ -1,0 +1,54 @@
+
+/* == Star new styles for theme compatibility */
+.mec-wrap .mec-event-footer .mec-booking-button {
+    font-weight: 600;
+}
+.mec-events-meta-group-countdown .countdown-w span {
+    font-weight: 700;
+}
+.mec-load-more-button{
+    font-weight: 700;
+}
+.mec-single-event .mec-event-social li.mec-event-social-icon a {
+    padding: inherit;
+    border-radius: 100px;
+}
+.mec-wrap .mec-search-form .mec-date-search select:last-child {
+    width: auto;
+}
+.mec-wrap .mec-search-form .select__field {
+    width: auto;
+    margin-right: 10px;
+}
+.mec-wrap .mec-search-form .mec-date-search select:last-child {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-left: 10px;
+}
+.mec-wrap .mec-search-form .select__field:before {
+    right: -15px;
+    top: -7px;
+}
+.mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-next, .mec-slider-t1-wrap .mec-owl-theme .owl-nav .owl-prev {
+    line-height: 28px;
+}
+.mec-wrap p {
+    font-size: initial;
+}
+
+.mec-wrap .flip-clock-divider .flip-clock-label {
+    bottom: -2em;
+}
+.mec-wrap .flip-clock-wrapper ul{
+    height: 60px;
+}
+.mec-single-event .mec-events-meta-group-countdown{
+    box-shadow: 0 20px 50px rgb(0 0 0 / 5%);
+}
+#mec_next_event_details {
+    box-shadow: 0 20px 50px rgb(0 0 0 / 5%);
+}
+.mec-events-meta-group-countdown {
+      box-shadow: 0 20px 50px rgb(0 0 0 / 5%);  
+}

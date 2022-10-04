@@ -1,0 +1,90 @@
+ {% extends 'base.html' %} {% block content %} {% load static %}
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Leads</h1>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Her is the List Of Our Leads.</p>
+                    <br>
+                    <a href="{% url 'leads:category-list' %}" class="text-blue-500 mb-2 left-0 top-0 py-2 px-20 bg-gray-300 inset-x-0 h-10 rounded link">Categories</a>
+
+                </div>
+                <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+                    <table class="table-auto w-full text-left whitespace-no-wrap">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Profile </th>
+                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Full Name</th>
+                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Agent</th>
+                                <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Description</th>
+                                <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for Lead in leads %}
+                            <tr>
+                                {% if Lead.profile_picture %}
+                                <td class="border-t-2 border-gray-200 "><img class="h-10 w-10 rounded-full" src="{{Lead.profile_picture.url}}"></td>
+                                {% else %}
+                                <td class="border-t-2 border-gray-200 "><img class="h-10 w-10 rounded-full" src="{% static 'img/profile.jpg' %}"></td>
+                                {% endif %}
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{Lead.first_name}} {{Lead.last_name}}</td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{Lead.agent}}</td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3">{{Lead.description}}</td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3  "><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                    Active
+                                  </span></td>
+                                <td class="border-t-2 border-gray-200 px-4 py-3 bg-green-400 rounded w-5"><a href="{% url 'leads:detail-lead' Lead.id %}">Detail</a></td>
+
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td> {% if request.user.is_organisor %}
+                                    <a href="{% url 'leads:create-lead' %}" class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 px-10 py-2 shadow-sm ">
+                                        <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
+                                      <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
+                                    </svg> New
+                                    </a>
+                                    {% endif %}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% if unassigned_leads.exists %}
+        <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 bg-red-300 w-100 text-center">Unassigned Leads</h1>
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="border-collapse border border-slate-400 table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Full Name</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Agent</th>
+                        <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Lead in unassigned_leads %}
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{Lead.first_name}} {{Lead.last_name}}</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{Lead.agent}}</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 "><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-200 text-green-800">
+                            Deactivate
+                          </span></td>
+                        <td class="border-t-2 border-gray-200 px-1 py-3 w-30 bg-green-400 rounded text-center hover:text-white"><a href="{% url 'leads:assign-agent' Lead.id %}">Assign As Agent</a></td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {% endif %}
+
+
+
+</section>
+
+{% endblock content %}
